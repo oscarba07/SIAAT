@@ -3,7 +3,7 @@
 # dar click en "ver más" y ajustar por mes por año según la información requerida
 # o ir a reportes SIAAT STPS -> home -> launch ibm cognos connection -> siaat -> cubo siaat -> 
 # plantilla -> ver más
-#setwd('C:/Users/baldenebro/Documents/Datos_TPR')
+#setwd('###')
 agem <- read.csv('AGEEML.csv') # descarga desde https://www.inegi.org.mx/app/ageeml/#
 agem <- subset(agem,select = c('CVE_ENT','NOM_ENT','NOM_ABR','CVE_MUN','NOM_MUN'))
 agem <- unique(agem)
@@ -160,7 +160,7 @@ jal_tot_tpr <- aggregate(subset(jal_tot,fecha>=inic&fecha<fin)
 # Mapas -------------------------------------------------------------------
 ## Por Entidad Federativa
 ### Leer datos creados
-carpeta_json <- "D:/OIT/Stats/Mapa/json"
+carpeta_json <- "###"
 ent_json <- rjson::fromJSON(file=paste0(carpeta_json,"/ent.geojson"))
 ent_json_b <- geojson_read(paste0(carpeta_json,"/ent.geojson"),  what = "sp")
 
